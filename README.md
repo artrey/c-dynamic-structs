@@ -1,1 +1,1 @@
-c-dynamic-structs
+Implementation of dynamic structs in C
