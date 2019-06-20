@@ -1,17 +1,9 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include "example.h"
 #include "vector.h"
-#include "dynamic_string.h"
-
-#define SWITCH_PRINT(val) switch ((val).discriminator) { \
-	case INT: printf("%d", (val).value.i); break; \
-	case FLOAT: printf("%f", (val).value.f); break; \
-	case DOUBLE: printf("%lf", (val).value.d); break; \
-	case CHAR: printf("%c", (val).value.c); break; \
-	case STRING: printf("%s", (val).value.str); break; \
-	default: printf("undefined discriminator [%d]", (val).discriminator); break; \
-}
+#include "../dynamic_string.h"
 
 void print_vector(const vector_t* v)
 {
@@ -20,7 +12,7 @@ void print_vector(const vector_t* v)
 	for (size_t i = 0; i < v->length; ++i)
 	{
 		printf("V[%d] = ", i);
-		SWITCH_PRINT(v->arr[i]);
+		PRINT_MULTI_TYPE(v->arr[i]);
 		printf("\n");
 	}
 }
@@ -31,7 +23,7 @@ void pop_and_print(vector_t* v)
 	if (vector_pop_back(v, &elem))
 	{
 		printf("pop success: ");
-		SWITCH_PRINT(elem);
+		PRINT_MULTI_TYPE(elem);
 		printf("\n");
 	}
 }
@@ -42,7 +34,7 @@ void at_and_print(vector_t* v, size_t index)
 	if (vector_at(v, index, &elem))
 	{
 		printf("at from pos %d success: ", index);
-		SWITCH_PRINT(elem);
+		PRINT_MULTI_TYPE(elem);
 		printf("\n");
 	}
 }
@@ -138,12 +130,4 @@ void vector_string_example()
 	}
 
 	free_vector(vec);
-}
-
-int main(int argc, char** argv)
-{
-	vector_int_example();
-	vector_double_example();
-	vector_string_example();
-	return 0;
 }

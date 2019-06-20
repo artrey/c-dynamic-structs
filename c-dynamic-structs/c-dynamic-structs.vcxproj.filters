@@ -13,24 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\vector">
+      <UniqueIdentifier>{7c9b20dd-6b98-4d84-ab3a-db1d4e4fefaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vector">
+      <UniqueIdentifier>{fe8f1a2e-420f-4b6e-85e6-a15ff078425d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="vector.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="dynamic_string.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vector\vector.c">
+      <Filter>Source Files\vector</Filter>
+    </ClCompile>
+    <ClCompile Include="vector\example.c">
+      <Filter>Source Files\vector</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="vector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="dynamic_string.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vector\vector.h">
+      <Filter>Header Files\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="multi_type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vector\example.h">
+      <Filter>Header Files\vector</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
