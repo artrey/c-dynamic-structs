@@ -19,54 +19,60 @@ vector_t* create_vector(size_t capacity)
 
 	v->arr = NULL;
 	v->length = 0;
-	reserve(v, capacity);
+	vector_reserve(v, capacity);
 	
 	return v;
 }
 
-void resize(vector_t* v, size_t size)
+void free_vector(vector_t* v)
+{
+	free(v->arr);
+	free(v);
+}
+
+void vector_resize(vector_t* v, size_t size)
 {
 	if (size > v->capacity)
 	{
-		reserve(v, size);
+		vector_reserve(v, size);
 	}
 	v->length = size;
 }
 
-void reserve(vector_t* v, size_t capacity)
+void vector_reserve(vector_t* v, size_t capacity)
 {
 	v->capacity = capacity;
 	// if v->arr == NULL then realloc same as malloc
-	int* t = (int*)realloc(v->arr, v->capacity * sizeof(int));
+	value_type* t = (value_type*)realloc(v->arr, v->capacity * sizeof(value_type));
 	v->arr = t;
 }
 
-void shrink(vector_t* v)
+void vector_shrink(vector_t* v)
 {
 	if (v->length < v->capacity)
 	{
-		reserve(v, v->length);
+		vector_reserve(v, v->length);
 	}
 }
 
-void push_back(vector_t* v, int elem)
+void vector_push_back(vector_t* v, value_type elem)
 {
 	if (v->length >= v->capacity)
 	{
-		reserve(v, v->capacity * 2);
+		vector_reserve(v, v->capacity * 2);
 	}
 	v->arr[v->length++] = elem;
 }
 
-bool pop_back(vector_t* v, int* elem)
+bool vector_pop_back(vector_t* v, value_type* elem)
 {
-	bool result = at(v, v->length - 1, elem);
+	bool result = vector_at(v, v->length - 1, elem);
 	if (result)
 		--v->length;
 	return result;
 }
 
-void set(vector_t* v, size_t index, int elem)
+void vector_set(vector_t* v, size_t index, value_type elem)
 {
 	if (index < v->length)
 	{
@@ -74,7 +80,7 @@ void set(vector_t* v, size_t index, int elem)
 	}
 }
 
-bool at(const vector_t* v, size_t index, int* elem)
+bool vector_at(const vector_t* v, size_t index, value_type* elem)
 {
 	if (index < v->length)
 	{
@@ -82,10 +88,4 @@ bool at(const vector_t* v, size_t index, int* elem)
 		return true;
 	}
 	return false;
-}
-
-void free_vector(vector_t* v)
-{
-	free(v->arr);
-	free(v);
 }

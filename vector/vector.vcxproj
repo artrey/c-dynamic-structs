@@ -143,10 +143,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dynamic_string.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="vector.c" />
+    <ClCompile Include="vector_example.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dynamic_string.h" />
     <ClInclude Include="vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
