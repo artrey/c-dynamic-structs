@@ -1,6 +1,8 @@
 #ifndef __MULTI_TYPE_H__
 #define __MULTI_TYPE_H__
 
+#include <stdbool.h>
+
 typedef enum value_type
 {
 	INT,
@@ -24,6 +26,8 @@ typedef struct multi_type
 	value_type_t discriminator;
 	multi_value_t value;
 } multi_type_t;
+
+bool equal_multi_type(multi_type_t a, multi_type_t b);
 
 #define PRINT_MULTI_TYPE(val) switch ((val).discriminator) { \
 	case INT: printf("%d", (val).value.i); break; \

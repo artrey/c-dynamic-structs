@@ -1,5 +1,5 @@
-#include "vector/example.h"
-#include "list/example.h"
+#include "vector/vector_example.h"
+#include "list/list_example.h"
 
 int main(int argc, char** argv)
 {

@@ -11,7 +11,7 @@ typedef multi_type_t value_type;
 typedef struct list_node
 {
 	value_type value;
-	list_node_t* next;
+	struct list_node* next;
 } list_node_t;
 
 typedef struct list

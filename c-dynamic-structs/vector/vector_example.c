@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include "example.h"
+#include "vector_example.h"
 #include "vector.h"
 #include "../dynamic_string.h"
 

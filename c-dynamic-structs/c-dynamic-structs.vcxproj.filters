@@ -19,6 +19,12 @@
     <Filter Include="Source Files\vector">
       <UniqueIdentifier>{fe8f1a2e-420f-4b6e-85e6-a15ff078425d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\list">
+      <UniqueIdentifier>{2bb125e3-a5e3-4e0d-8617-fd1dbdfa9b90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\list">
+      <UniqueIdentifier>{2edb774a-6edc-4379-8a77-2a4111642e39}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -30,8 +36,17 @@
     <ClCompile Include="vector\vector.c">
       <Filter>Source Files\vector</Filter>
     </ClCompile>
-    <ClCompile Include="vector\example.c">
+    <ClCompile Include="list\list.c">
+      <Filter>Source Files\list</Filter>
+    </ClCompile>
+    <ClCompile Include="list\list_example.c">
+      <Filter>Source Files\list</Filter>
+    </ClCompile>
+    <ClCompile Include="vector\vector_example.c">
       <Filter>Source Files\vector</Filter>
+    </ClCompile>
+    <ClCompile Include="multi_type.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -44,7 +59,16 @@
     <ClInclude Include="multi_type.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vector\example.h">
+    <ClInclude Include="list\list.h">
+      <Filter>Header Files\list</Filter>
+    </ClInclude>
+    <ClInclude Include="list\double_linked_list.h">
+      <Filter>Header Files\list</Filter>
+    </ClInclude>
+    <ClInclude Include="list\list_example.h">
+      <Filter>Header Files\list</Filter>
+    </ClInclude>
+    <ClInclude Include="vector\vector_example.h">
       <Filter>Header Files\vector</Filter>
     </ClInclude>
   </ItemGroup>
