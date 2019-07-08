@@ -149,6 +149,8 @@
     <ClCompile Include="list\list.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="multi_type.c" />
+    <ClCompile Include="queue\queue.c" />
+    <ClCompile Include="queue\queue_example.c" />
     <ClCompile Include="vector\vector_example.c" />
     <ClCompile Include="vector\vector.c" />
   </ItemGroup>
@@ -158,6 +160,8 @@
     <ClInclude Include="list\list_example.h" />
     <ClInclude Include="list\list.h" />
     <ClInclude Include="multi_type.h" />
+    <ClInclude Include="queue\queue.h" />
+    <ClInclude Include="queue\queue_example.h" />
     <ClInclude Include="vector\vector_example.h" />
     <ClInclude Include="vector\vector.h" />
   </ItemGroup>

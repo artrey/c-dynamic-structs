@@ -1,5 +1,6 @@
 #include "vector/vector_example.h"
 #include "list/list_example.h"
+#include "queue/queue_example.h"
 
 int main(int argc, char** argv)
 {
@@ -10,6 +11,9 @@ int main(int argc, char** argv)
 	list_int_example();
 	list_double_example();
 	list_string_example();
+
+	queue_int_example();
+	queue_string_example();
 
 	return 0;
 }

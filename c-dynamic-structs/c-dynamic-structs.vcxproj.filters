@@ -25,6 +25,12 @@
     <Filter Include="Source Files\list">
       <UniqueIdentifier>{2edb774a-6edc-4379-8a77-2a4111642e39}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\queue">
+      <UniqueIdentifier>{80724248-b0d8-4bb9-beef-eda0c9e0bc4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\queue">
+      <UniqueIdentifier>{8cd2dcd3-7b9b-41fb-ab8c-2c4a8538773b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -48,6 +54,12 @@
     <ClCompile Include="multi_type.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="queue\queue.c">
+      <Filter>Source Files\queue</Filter>
+    </ClCompile>
+    <ClCompile Include="queue\queue_example.c">
+      <Filter>Source Files\queue</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamic_string.h">
@@ -70,6 +82,12 @@
     </ClInclude>
     <ClInclude Include="vector\vector_example.h">
       <Filter>Header Files\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="queue\queue.h">
+      <Filter>Header Files\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="queue\queue_example.h">
+      <Filter>Header Files\queue</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
